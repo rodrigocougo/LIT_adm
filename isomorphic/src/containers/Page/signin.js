@@ -51,31 +51,40 @@ class SignIn extends Component {
           <div className="isoLoginContent">
             <div className="isoLogoWrapper">
               <Link to="/dashboard">
-                <IntlMessages id="page.signInTitle" />
-              </Link>
+                {/* <IntlMessages id="page.signInTitle" /> */}
+                Entrar
+              </Link>              
+            </div>
+
+            <div>
+              
+              <p>Bem-vindo, insira seu e-mail e senha para acessar o LIT ou para acessar a série Na Real</p>
+              {<br></br>}
             </div>
 
             <div className="isoSignInForm">
               <div className="isoInputWrapper">
-                <Input size="large" placeholder="Username" />
+                <Input size="large" placeholder="E-mail" />
               </div>
 
               <div className="isoInputWrapper">
-                <Input size="large" type="password" placeholder="Password" />
+                <Input size="large" type="password" placeholder="Senha" />
               </div>
 
               <div className="isoInputWrapper isoLeftRightComponent">
                 <Checkbox>
-                  <IntlMessages id="page.signInRememberMe" />
+                  {/* <IntlMessages id="page.signInRememberMe" /> */}
+                  <a>Lembrar senha</a>
                 </Checkbox>
                 <Button type="primary" onClick={this.handleLogin}>
-                  <IntlMessages id="page.signInButton" />
+                  {/* <IntlMessages id="page.signInButton" /> */}
+                  <a>Entrar</a>
                 </Button>
               </div>
 
-              <p className="isoHelperText">
+              {/* <p className="isoHelperText">
                 <IntlMessages id="page.signInPreview" />
-              </p>
+              </p> */}
 
               <div className="isoInputWrapper isoOtherLogin">
                 <Button
@@ -110,12 +119,16 @@ class SignIn extends Component {
                 )}
               </div>
               <div className="isoCenterComponent isoHelperWrapper">
-                <Link to="/forgotpassword" className="isoForgotPass">
+                <h2>Ainda não tem conta?</h2>
+                {<br></br>}
+                  <a>Crie uma conta para acessar o LIT</a>
+                  <a>Crie uma conta para assistir a série Na Real</a>
+                {/* <Link to="/forgotpassword" className="isoForgotPass">
                   <IntlMessages id="page.signInForgotPass" />
                 </Link>
                 <Link to="/signup">
                   <IntlMessages id="page.signInCreateAccount" />
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
